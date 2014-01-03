@@ -30,7 +30,7 @@ $(function(){
 		//获取文本框的值
 		tYear = 2014;
 		tMonth = 1;
-		tDate = 4;
+		tDate = 10;
 		
 		//设置结束时间
 		oEndDate.setFullYear(parseInt(tYear));
