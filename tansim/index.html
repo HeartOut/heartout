@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link type="text/css" rel="stylesheet" href="style.css" />
+<script type="text/javascript" src="jquery-1.5.1.min.js"></script>
+<script type="text/javascript" src="time.js"></script>
+
+</head>
+<body>
+<div class="all">
+   <div class="container">
+    <div id="count" class="countClass">
+    	<span></span>天<span></span>时<span></span>分<span></span>秒
+    </div>
+</div>
+<div class="tan">
+<img src="tan.png" />
+<div id="face" style="position:absolute;top:140px;left:51px;z-index:9;">
+<img src="face0.png" />
+
+</div>
+<div id="say" style="display:none;position:absolute;top:300px;right:0px">
+<img src="saying.png" />
+</div>
+
+</div>
+</div>
+
+<script type="text/javascript">
+$(document).ready(function(){
+ $(".tan").hover(
+ function(){
+	$(this).css({cursor:"url(ttq.cur),auto"});
+	$(this).find("#face").html('<img src="face1.png" />').show();
+})
+ $(".tan").mouseleave(
+ function(){
+	$(this).find("#face").html('<img src="face0.png" />').show();
+})
+$(".tan").click(
+ function(){
+	 
+	 $("#say").fadeIn(200).delay(1000).fadeOut(200);
+	 $(this).find("#face").html('<img src="face2.png" />').show();
+})
+})
+ 
+</script>
+</body>
+</html>

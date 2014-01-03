@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="jquery-1.5.1.min.js"></script>
+<title>无标题文档</title>
+<style>
+*
+{
+	margin:0;
+	padding:0;
+}
+body{
+	
+	width:1000px;
+	margin:0 auto;
+	background:#7e0000;
+}
+.tan
+{
+	padding:50px;
+	width:300px;
+	height:300px;
+
+
+}
+</style>
+<script>
+$(document).ready(function(){
+ $(".tan").hover(
+ function(){
+	// $(this).css({cursor:"url(11.jpg),auto"}),
+	 $(this).css({cursor:"url(ttq.cur),auto"}).fadeIn(200);
+})
+
+$(".tan").click(
+ function(){
+	 $("#say").fadeIn(200).delay(1000).fadeOut(200);
+})
+})
+ 
+
+</script>
+</head>
+<div class="tan"><img src="tan.png" /></div>
+<div id="say" style="display:none;margin-left:200px;"><img src="saying.png" /></div>
+</div>
+<body>
+</body>
+</html>
