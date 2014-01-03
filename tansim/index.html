@@ -13,6 +13,7 @@
     <div id="count" class="countClass">
     	<span></span>天<span></span>时<span></span>分<span></span>秒
     </div>
+    <div id="clickCount"></div>
 </div>
 <div class="tan">
 <img src="images/tan.png" />
@@ -24,27 +25,47 @@
 </div>
 </div>
 <div class="footer">
-baidu,weibo
+<div id="tb" style="padding:10px;float:left;margin-right:30px;">
+<a href="http://tieba.baidu.com" style="border:0"><img src="images/tieba.png" /></a>
+<div id="tbtag" style="display:none;position:absolute;top:-20px;left:-40px">去贴吧发生日祝福</div>
+</div>
+<div id="wb" style="padding:10px;float:left;">
+<a href="http://weibo.com" style="border:0"><img src="images/weibo.png" /></a>
+<div id="wbtag" style="display:none;position:absolute;top:-20px;left:60px;width:200px;">去微博发生日祝福</div>
+</div>
 </div>
 </div>
 
 <script type="text/javascript">
 $(document).ready(function(){
- $(".tan").hover(
- function(){
+ $(".tan").hover(function()
+ {
 	$(this).css({cursor:"url(images/ttq.cur),auto"});
 	$(this).find("#face").html('<img src="images/face1.png" />').show();
-})
- $(".tan").mouseleave(
- function(){
+});
+ $(".tan").mouseleave(function()
+ {
 	$(this).find("#face").html('<img src="images/face0.png" />').show();
-})
-$(".tan").click(
- function(){
-	 
+});
+$(".tan").click(function()
+{
 	 $("#say").fadeIn(200).delay(1000).fadeOut(200);
 	 $(this).find("#face").html('<img src="images/face2.png" />').show();
-})
+});
+$("#tb").mouseenter(function(){
+$("#tbtag").fadeIn(200);
+});
+$("#tb").mouseleave(function(){
+$("#tbtag").fadeOut(200);
+});
+$("#wb").mouseenter(function(){
+$("#wbtag").fadeIn(200);
+});
+$("#wb").mouseleave(function(){
+$("#wbtag").fadeOut(200);
+});
+
+
 })
  
 </script>
